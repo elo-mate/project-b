@@ -10,7 +10,7 @@ def process_data(items):
     return {
         "count": len(items),
         "total": total,
-        "average": total / len(items),
+        "average": round(total / len(items), 2),
     }
 
 
