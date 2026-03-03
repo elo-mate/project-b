@@ -14,6 +14,10 @@ class TestProcessData(unittest.TestCase):
         self.assertEqual(result["total"], 60)
         self.assertEqual(result["average"], 20)
 
+    def test_rounded_average(self):
+        result = process_data([1, 2, 4])
+        self.assertEqual(result["average"], 2.33)
+
 
 class TestFilterItems(unittest.TestCase):
     def test_min_filter(self):
